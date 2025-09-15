@@ -1,0 +1,57 @@
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+
+        <!-- Default fields -->
+    <x-input id="name" label="Name" type="text" name="name" :value="old('name')" required autofocus />
+    <x-input id="email" label="Email" type="email" name="email" :value="old('email')" required />
+    <x-input id="password" label="Password" type="password" name="password" required autocomplete="new-password" />
+    <x-input id="password_confirmation" label="Confirm Password" type="password" name="password_confirmation" required />
+
+    <!-- New fields -->
+    <x-input id="image_gallery" label="Image Gallery" type="file" name="image_gallery" accept="image/*" />
+
+    <x-input id="notification_preferences" label="Notification Preferences (email alerts)" type="text" name="notification_preferences" :value="old('notification_preferences')" />
+
+    <x-input id="years_of_experience" label="Years of Experience" type="number" name="years_of_experience" :value="old('years_of_experience')" />
+
+    <x-input id="educational_background" label="Educational Background" type="text" name="educational_background" :value="old('educational_background')" />
+
+    <x-textarea id="certifications_and_fellowships" label="Certifications & Fellowships" name="certifications_and_fellowships" :value="old('certifications_and_fellowships')" />
+
+    <x-textarea id="areas_of_interest" label="Areas of Interest" name="areas_of_interest" :value="old('areas_of_interest')" />
+
+    <x-input id="languages_spoken" label="Languages Spoken" type="text" name="languages_spoken" :value="old('languages_spoken')" />
+
+    <x-input id="phone" label="Phone" type="text" name="phone" :value="old('phone')" />
+
+    <x-input id="location" label="Location" type="text" name="location" :value="old('location')" />
+
+    <x-textarea id="short_bio" label="Short Bio" name="short_bio" :value="old('short_bio')" />
+
+    <x-input id="personal_website" label="Personal Website" type="url" name="personal_website" :value="old('personal_website')" />
+
+    <x-input id="linkedin" label="LinkedIn" type="url" name="linkedin" :value="old('linkedin')" />
+
+    <x-input id="researchgate" label="ResearchGate" type="url" name="researchgate" :value="old('researchgate')" />
+
+    <x-input id="cv" label="Upload CV (PDF)" type="file" name="cv" accept=".pdf" />
+
+    <x-input id="social_links" label="Social Links (Facebook, Twitter)" type="text" name="social_links" :value="old('social_links')" />
+
+    <x-input id="membership_id" label="Membership ID" type="text" name="membership_id" :value="old('membership_id')" />
+
+    <x-input id="membership_level" label="Membership Level" type="text" name="membership_level" :value="old('membership_level')" />
+
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ms-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>
