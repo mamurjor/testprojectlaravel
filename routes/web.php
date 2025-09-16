@@ -251,3 +251,7 @@ Route::post('/blog/{post:slug}/comments', [AjaxCommentController::class, 'store'
 
 
 require __DIR__.'/auth.php';
+
+require __DIR__.'/event.php';
+
+
