@@ -161,8 +161,12 @@ Route::middleware('auth','verified')->group(function () {
 
   // Public single page view by slug (optional)
 Route::get('/page/{slug}', function($slug){
+
     $page = Page::where('slug',$slug)->where('status','published')->firstOrFail();
+
+    return $page;
     return view('pages.show', compact('page'));
+
 })->name('page.public.show');
 
 Route::post('/editor/image-upload', [PageController::class, 'image'])
@@ -174,6 +178,7 @@ Route::post('/editor/image-upload', [PageController::class, 'image'])
 Route::middleware('auth')->group(function () {
     Route::resource('herosections', HeroSectionController::class);
 });
+
 
 
 Route::middleware('auth')->group(function () {

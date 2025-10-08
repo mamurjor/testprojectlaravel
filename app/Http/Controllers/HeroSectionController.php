@@ -67,9 +67,8 @@ class HeroSectionController extends Controller
 
     public function destroy(HeroSection $herosection)
     {
-        if ($herosection->image) {
-            Storage::disk('public')->delete($herosection->image);
-        }
+
+
         $herosection->delete();
 
         return redirect()->route('herosections.index')->with('success', 'Hero deleted.');

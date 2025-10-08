@@ -1,0 +1,62 @@
+<section id="members" class="section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Presidium Members</h2>
+                <p class="text-muted">Leadership team guiding BDCL’s mission & values</p>
+            </div>
+            <div class="row g-4">
+                {{-- Member card 1 --}}
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="member-card shadow-soft h-100">
+                        <img class="avatar"
+                            src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=800&auto=format&fit=crop"
+                            alt="Member">
+                        <div class="p-3">
+                            <div class="title">Dr. Jane Cooper</div>
+                            <div class="text-muted small mb-2">President</div>
+                            <a href="#" class="btn btn-sm btn-brand w-100">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {{-- 2 --}}
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="member-card shadow-soft h-100">
+                        <img class="avatar"
+                            src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=800&auto=format&fit=crop"
+                            alt="Member">
+                        <div class="p-3">
+                            <div class="title">Prof. Esther Howard</div>
+                            <div class="text-muted small mb-2">Vice President</div>
+                            <a href="#" class="btn btn-sm btn-brand w-100">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {{-- 3 --}}
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="member-card shadow-soft h-100">
+                        <img class="avatar"
+                            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop"
+                            alt="Member">
+                        <div class="p-3">
+                            <div class="title">Dr. Cameron Williamson</div>
+                            <div class="text-muted small mb-2">Secretary</div>
+                            <a href="#" class="btn btn-sm btn-brand w-100">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {{-- 4 --}}
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="member-card shadow-soft h-100">
+                        <img class="avatar"
+                            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
+                            alt="Member">
+                        <div class="p-3">
+                            <div class="title">Dr. Ronald Richards</div>
+                            <div class="text-muted small mb-2">Treasurer</div>
+                            <a href="#" class="btn btn-sm btn-brand w-100">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
