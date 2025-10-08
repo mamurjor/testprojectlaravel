@@ -60,6 +60,9 @@
                             <li aria-haspopup="true"><a href="{{ route('settingform') }}" class="slide-item">Project
                                     Setting</a>
                             </li>
+                            <li aria-haspopup="true"><a href="{{ route('pages.index') }}" class="slide-item">
+                                    All Pages</a>
+                            </li>
                             <li aria-haspopup="true"><a href="{{ route('posts.index') }}" class="slide-item">
                                     Blog Post</a>
                             </li>

@@ -223,17 +223,24 @@
         {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> --}}
 
         <script>
-            // tooltip init
-            document.querySelectorAll('[data-bs-toggle="tooltip"], [data-bs-toggle-second="tooltip"]').forEach(el => {
-                new bootstrap.Tooltip(el);
-            });
-
-            // set delete form action from row button
             const delModal = document.getElementById('deleteModal');
+            const delForm = document.getElementById('deleteForm');
+
             delModal?.addEventListener('show.bs.modal', function(event) {
                 const btn = event.relatedTarget;
-                const url = btn.getAttribute('data-delete-url');
-                document.getElementById('deleteForm').setAttribute('action', url);
+                const url = btn?.getAttribute('data-delete-url');
+                console.log('[DeleteModal] trigger:', btn);
+                console.log('[DeleteModal] url:', url);
+                delForm?.setAttribute('action', url ?? '');
+            });
+
+            delForm?.addEventListener('submit', function(e) {
+                const action = delForm.getAttribute('action');
+                console.log('[DeleteForm] submit action:', action);
+                if (!action) {
+                    e.preventDefault();
+                    alert('Delete URL সেট হয়নি।');
+                }
             });
         </script>
     @endpush

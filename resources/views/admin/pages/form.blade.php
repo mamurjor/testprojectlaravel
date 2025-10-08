@@ -134,7 +134,7 @@
 
                     <div class="card shadow-sm border-0 mb-4">
                         <div class="card-header bg-white py-3">
-                            <div class="fw-semibold"><i class="bi bi-image me-2"></i>Featured Image {{ $fiUrl }}
+                            <div class="fw-semibold"><i class="bi bi-image me-2"></i>Featured Image
                             </div>
                         </div>
                         <div class="card-body p-4">

@@ -157,6 +157,8 @@ class PageController extends Controller
 
     public function destroy(Page $page)
     {
+
+
         if ($page->featured_image && file_exists(public_path($page->featured_image))) {
             @unlink(public_path($page->featured_image));
         }
